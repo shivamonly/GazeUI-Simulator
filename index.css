@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F5F5F3;
+  color: #121212;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for premium minimalist feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #E8E8E6;
+}
+::-webkit-scrollbar-thumb {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2D2D2D;
+}
+
+/* Starburst flash keyframe for selected state */
+@keyframes select-pulse {
+  0% {
+    transform: scale(0.6) translate(-50%, -50%);
+    opacity: 1;
+    border-width: 8px;
+  }
+  100% {
+    transform: scale(2) translate(-25%, -25%);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+.flash-ring {
+  animation: select-pulse 0.25s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}

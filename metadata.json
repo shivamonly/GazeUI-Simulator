@@ -1,0 +1,10 @@
+{
+  "name": "GazeUI",
+  "description": "Real-time webcam-based eye gaze tracking interface, calibration engine, and hands-free interaction simulator.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
